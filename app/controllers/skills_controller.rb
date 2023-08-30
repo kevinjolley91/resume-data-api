@@ -15,4 +15,12 @@ class SkillsController < ApplicationController
     @skill = Skill.find_by(id: params[:id])
     render json: @skill
   end
+
+  def update
+    @skill = Skill.find_by(id: params[:id])
+    @skill.update(
+      name: params[:name] || @skill.name,
+    )
+    render json: @skill
+  end
 end
