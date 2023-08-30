@@ -23,4 +23,10 @@ class SkillsController < ApplicationController
     )
     render json: @skill
   end
+
+  def destroy
+    @skill = Skill.find_by(id: params[:id])
+    @skill.destroy
+    render json: { message: "Skill destroyed successfully" }
+  end
 end
