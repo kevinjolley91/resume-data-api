@@ -18,10 +18,10 @@ class StudentsController < ApplicationController
       short_bio: params[:short_bio],
       linkedin_url: params[:linkedin_url],
       twitter_handle: params[:twitter_handle],
-      personal_blog_or_website_url: params[:personal_blog_or_website_url],
+      "personal_blog/website_url": params[:"personal_blog/website_url"],
       online_resume_url: params[:online_resume_url],
       github_url: params[:github_url],
-      photo_url: params[:photo_url],
+      photo: params[:photo],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
     )
@@ -42,10 +42,10 @@ class StudentsController < ApplicationController
       short_bio: params[:short_bio] || @student.short_bio,
       linkedin_url: params[:linkedin_url] || @student.linkedin_url,
       twitter_handle: params[:twitter_handle] || @student.twitter_handle,
-      personal_blog_or_website_url: params[:personal_blog_or_website_url] || @student.personal_blog_or_website_url,
+      "personal_blog/website_url": params[:"personal_blog/website_url"] || @student.personal_blog/website_url,
       online_resume_url: params[:online_resume_url] || @student.online_resume_url,
       github_url: params[:github_url] || @student.github_url,
-      photo_url: params[:photo_url] || @student.photo_url,
+      photo: params[:photo] || @student.photo,
     )
     if @student.save
       render json: @student
