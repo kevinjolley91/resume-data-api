@@ -15,4 +15,9 @@ class ExperiencesController < ApplicationController
     render json: @experience
     # we won't be rendering json in the completed app
   end
+
+  def show
+    @experience = Experience.find_by(id: params[:id])
+    render json: @experience
+  end
 end
