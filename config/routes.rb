@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   get "/skills" => "skills#index"
   post "/skills" => "skills#create"
+  get "/skills/:id" => "skills#show"
 end
