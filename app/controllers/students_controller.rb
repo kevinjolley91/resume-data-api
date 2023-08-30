@@ -22,6 +22,8 @@ class StudentsController < ApplicationController
       online_resume_url: params[:online_resume_url],
       github_url: params[:github_url],
       photo_url: params[:photo_url],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation],
     )
     if @student.save
       render json: @student
