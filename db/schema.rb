@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+ActiveRecord::Schema[7.0].define(version: 2023_08_30_180007) do
+
+
 ActiveRecord::Schema[7.0].define(version: 2023_08_30_172643) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +43,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_30_174653) do
     t.string "company_name"
 
 ActiveRecord::Schema[7.0].define(version: 2023_08_30_172208) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "capstones", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "url"
+    t.string "screenshot"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "educations", force: :cascade do |t|
     t.date "start_date"
