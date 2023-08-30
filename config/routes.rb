@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   delete "/experiences/:id" => "experiences#destroy"
 
   get "/skills" => "skills#index"
+  post "/skills" => "skills#create"
 end

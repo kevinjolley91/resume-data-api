@@ -3,4 +3,11 @@ class SkillsController < ApplicationController
     @skills = Skill.all
     render json: @skills
   end
+
+  def create
+    @skill = Skill.create(
+      name: params[:name],
+    )
+    render json: @skill
+  end
 end
