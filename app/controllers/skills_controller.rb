@@ -1,4 +1,6 @@
 class SkillsController < ApplicationController
+  before_action :authenticate_student, except: [:index, :show]
+
   def index
     @skills = Skill.all
     render json: @skills
@@ -7,7 +9,7 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.create(
       name: params[:name],
-      student_id: params[:student_id],
+      student_id: current_student.id,
     )
     render json: @skill
   end
@@ -19,16 +21,24 @@ class SkillsController < ApplicationController
 
   def update
     @skill = Skill.find_by(id: params[:id])
-    @skill.update(
-      name: params[:name] || @skill.name,
-      student_id: params[:student_id] || @skill.student_id,
-    )
-    render json: @skill
+    if @skill.student_id == current_student.id
+      @skill.update(
+        name: params[:name] || @skill.name,
+        student_id: params[:student_id] || @skill.student_id,
+      )
+      render json: @skill
+    else
+      render json: { message: "This is not your Skill. You cannot edit it" }
+    end
   end
 
   def destroy
     @skill = Skill.find_by(id: params[:id])
-    @skill.destroy
-    render json: { message: "Skill destroyed successfully" }
+    if @skill.student_id == current_student.id
+      @skill.destroy
+      render json: { message: "Skill destroyed successfully" }
+    else
+      render json: { message: "This is not your Skill. You cannot delete it" }
+    end
   end
 end
