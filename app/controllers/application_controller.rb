@@ -21,7 +21,14 @@ class ApplicationController < ActionController::Base
 
   def authenticate_student
     unless current_student
-      render json: {}, status: :unauthorized
+      render json: { message: "You must be a signed in student to access this page." }, status: :unauthorized
+    end
+  end
+
+  #testing this out...
+  def authenticate_admin
+    unless current_student && current_student.admin
+      render json: { message: "You must be an admin to access this feature." }, status: :unauthorized
     end
   end
 end
