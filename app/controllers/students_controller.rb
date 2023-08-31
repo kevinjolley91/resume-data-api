@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :authenticate_student, except: [:index, :show]
+  before_action :authenticate_student, except: [:index, :show, :create]
 
   def index
     @students = Student.all
@@ -8,7 +8,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find_by(id: params["id"])
-    render json: @student    
+    render json: @student
   end
 
   def create
@@ -44,7 +44,7 @@ class StudentsController < ApplicationController
       short_bio: params[:short_bio] || @student.short_bio,
       linkedin_url: params[:linkedin_url] || @student.linkedin_url,
       twitter_handle: params[:twitter_handle] || @student.twitter_handle,
-      "personal_blog/website_url": params[:"personal_blog/website_url"] || @student.personal_blog/website_url,
+      "personal_blog/website_url": params[:"personal_blog/website_url"] || @student.personal_blog / website_url,
       online_resume_url: params[:online_resume_url] || @student.online_resume_url,
       github_url: params[:github_url] || @student.github_url,
       photo: params[:photo] || @student.photo,
@@ -59,6 +59,6 @@ class StudentsController < ApplicationController
   def delete
     @student = Student.find_by(id: params["id"])
     @student.delete
-    render json: { message: "Student removed."}
+    render json: { message: "Student removed." }
   end
 end
