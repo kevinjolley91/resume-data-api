@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_31_164921) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_31_165658) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_164921) do
     t.text "short_bio"
     t.string "linkedin_url"
     t.string "twitter_handle"
-    t.string "personal_blog/website_url"
+    t.string "personal_website_url"
     t.string "online_resume_url"
     t.string "github_url"
     t.string "photo"
