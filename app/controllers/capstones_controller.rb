@@ -1,4 +1,6 @@
 class CapstonesController < ApplicationController
+  before_action :authenticate_student, except: [:index, :show]
+
   def index
     @capstones = Capstone.all
     render json: @capstones
@@ -32,13 +34,17 @@ class CapstonesController < ApplicationController
       )
       render json: @capstone
     else
-      render json: { message: "This is not your capstone. You cannot edit it."}
+      render json: { message: "This is not your Capstone. You cannot edit it" }
     end
   end
 
   def destroy
     @capstone = Capstone.find_by(id: params[:id])
-    @capstone.destroy
-    render json: { message: "Capstone destroyed successfully" }
+    if @capstone.student_id == current_student.id
+      @capstone.destroy
+      render json: { message: "Capstone destroyed successfully" }
+    else
+      render json: { message: "This is not your Capstone. You cannot delete it" }
+    end
   end
 end
