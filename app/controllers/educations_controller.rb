@@ -16,6 +16,7 @@ class EducationsController < ApplicationController
       degree: params[:degree],
       university_name: params[:university_name],
       details: params[:details],
+      student_id: params[:student_id],
     )
     render json: @education
   end
@@ -28,6 +29,7 @@ class EducationsController < ApplicationController
       degree: params[:degree] || @education.degree,
       university_name: params[:university_name] || @education.university_name,
       details: params[:details] || @education.details,
+      student_id: params[:student_id] || @education.student_id,
 
     )
     render json: @education
