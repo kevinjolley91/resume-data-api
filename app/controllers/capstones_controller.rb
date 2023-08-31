@@ -1,4 +1,6 @@
 class CapstonesController < ApplicationController
+  before_action :authenticate_student, except: [:index, :show]
+
   def index
     @capstones = Capstone.all
     render json: @capstones
@@ -15,21 +17,24 @@ class CapstonesController < ApplicationController
       description: params[:description],
       url: params[:url],
       screenshot: params[:screenshot],
-
     )
     render json: @capstone
   end
 
   def update
     @capstone = Capstone.find_by(id: params[:id])
-    @capstone.update(
-      name: params[:name] || @capstone.name,
-      description: params[:description] || @capstone.description,
-      url: params[:url] || @capstone.url,
-      screenshot: params[:screenshot] || @capstone.screenshot,
+    if capstone.student_id == current_student
+      @capstone.update(
+        name: params[:name] || @capstone.name,
+        description: params[:description] || @capstone.description,
+        url: params[:url] || @capstone.url,
+        screenshot: params[:screenshot] || @capstone.screenshot,
+      )
+      render json: @capstone
+      render json: { message: "This is not your Capstone. You cannot edit it." }
 
-    )
-    render json: @capstone
+    else
+
   end
 
   def destroy
