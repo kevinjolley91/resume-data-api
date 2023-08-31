@@ -32,12 +32,12 @@ class StudentsController < ApplicationController
     if @student.save
       render json: @student
     else
-      render json: { errors: @student.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @student.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def update
-    @student = Student.find_by(id: params["id"])
+    @student = current_student
     @student.update(
       first_name: params[:first_name] || @student.first_name,
       last_name: params[:last_name] || @student.last_name,
@@ -54,7 +54,7 @@ class StudentsController < ApplicationController
     if @student.save
       render json: @student
     else
-      render json: { errors: @student.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @student.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
