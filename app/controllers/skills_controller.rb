@@ -8,7 +8,7 @@ class SkillsController < ApplicationController
 
   def create
     @skill = Skill.create(
-      name: params[:name],
+      Skill_name: params[:Skill_name],
       student_id: current_student.id,
     )
     render json: @skill
@@ -23,7 +23,7 @@ class SkillsController < ApplicationController
     @skill = Skill.find_by(id: params[:id])
     if @skill.student_id == current_student.id
       @skill.update(
-        name: params[:name] || @skill.name,
+        skill_name: params[:skill_name] || @skill.skill_name,
         student_id: params[:student_id] || @skill.student_id,
       )
       render json: @skill
