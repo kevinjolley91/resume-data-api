@@ -17,7 +17,7 @@ class CapstonesController < ApplicationController
       description: params[:description],
       url: params[:url],
       screenshot: params[:screenshot],
-      student_id: current_student.student_id,
+      student_id: current_student.id,
     )
     render json: @capstone
   end
@@ -40,7 +40,11 @@ class CapstonesController < ApplicationController
 
   def destroy
     @capstone = Capstone.find_by(id: params[:id])
-    @capstone.destroy
-    render json: { message: "Capstone destroyed successfully" }
+    if @capstone.student_id == current_student
+      @capstone.destroy
+      render json: { message: "Capstone destroyed successfully" }
+    else
+      render json: { message: "This is not your Capstone. You cannot delete it" }
+    end
   end
 end
