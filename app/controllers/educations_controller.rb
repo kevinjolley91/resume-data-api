@@ -25,7 +25,7 @@ class EducationsController < ApplicationController
 
   def update
     @education = Education.find_by(id: params[:id])
-    if @education.student_id == current_student
+    if @education.student_id == current_student.id
       @education.update(
         start_date: params[:start_date] || @education.start_date,
         end_date: params[:end_date] || @education.end_date,
@@ -42,7 +42,7 @@ class EducationsController < ApplicationController
 
   def destroy
     @education = Education.find_by(id: params[:id])
-    if @education.student_id == current_student
+    if @education.student_id == current_student.id
       @education.destroy
       render json: { message: "Education destroyed successfully" }
     else

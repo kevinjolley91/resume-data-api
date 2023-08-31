@@ -24,7 +24,7 @@ class CapstonesController < ApplicationController
 
   def update
     @capstone = Capstone.find_by(id: params[:id])
-    if @capstone.student_id == current_student
+    if @capstone.student_id == current_student.id
       @capstone.update(
         name: params[:name] || @capstone.name,
         description: params[:description] || @capstone.description,
@@ -40,7 +40,7 @@ class CapstonesController < ApplicationController
 
   def destroy
     @capstone = Capstone.find_by(id: params[:id])
-    if @capstone.student_id == current_student
+    if @capstone.student_id == current_student.id
       @capstone.destroy
       render json: { message: "Capstone destroyed successfully" }
     else
