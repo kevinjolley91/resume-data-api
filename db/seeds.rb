@@ -1,54 +1,76 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 Student.create!([
-  { first_name: "John", last_name: "Doe", email: "john@example.com", phone_number: "123-456-7890", short_bio: "Short Bio", linkedin_url: "http://linkedin.com", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://cdn-icons-png.flaticon.com/512/5850/5850276.png", password: "password", password_confirmation: "password" },
-  { first_name: "Leah", last_name: "Doe", email: "leah@example.com", phone_number: "123-456-7890", short_bio: "Short Bio", linkedin_url: "http://linkedin.com", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://cdn-icons-png.flaticon.com/512/2491/2491056.png", password: "password", password_confirmation: "password" },
-  { first_name: "Anna", last_name: "Doe", email: "anna@example.com", phone_number: "123-456-7890", short_bio: "Short Bio", linkedin_url: "http://linkedin.com", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://cdn.icon-icons.com/icons2/1465/PNG/512/132womanstudent2_100407.png", password: "password", password_confirmation: "password" },
-])
-
-Capstone.create!([
-  { name: "Capstone 1", description: "Systems of object recognition.", url: "http://capstone1.com", screenshot: "https://upload.wikimedia.org/wikipedia/commons/2/27/QEMU_6.2_screenshot_%28cropped%29.png", student_id: 1 },
-  { name: "Capstone 2", description: "Effective plans for IT emergency recovery.", url: "http://capstone2.com", screenshot: "https://kinsta.com/wp-content/uploads/2021/04/cleanshot-obfuscate-tool.png", student_id: 2 },
-  { name: "Capstone 3", description: "Top practices for managing records and documents.", url: "http://capstone3.com", screenshot: "https://kinsta.com/wp-content/uploads/2021/04/notes-image.png", student_id: 3 },
-  { name: "Capstone 4", description: "Networking security issues.", url: "http://capstone4.com", screenshot: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Slax.png", student_id: 3 },
-  { name: "Capstone 5", description: "All system for business decision-making purpose.", url: "http://capstone5.com", screenshot: "https://blog.desdelinux.net/wp-content/uploads/2012/11/slax.jpg", student_id: 2 },
-  { name: "Capstone 6", description: "Intelligent systems of voice recognition.", url: "http://capstone6.com", screenshot: "https://www.flupe.com/code/code-screenshot.png", student_id: 1 },
+  { first_name: "Adena", last_name: "E", email: "adena@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Adena! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/adena-eisenberg/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Ariella", last_name: "G", email: "ariella@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Ariella! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/ariella-garfinkel/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Dan", last_name: "R", email: "dan@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Dan! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/danielrichert62/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Enoch", last_name: "K", email: "enoch@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Enoch! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/enoch--kang/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Kevin", last_name: "J", email: "kevin@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Kevin! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/kevinjolley91/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Luke", last_name: "N", email: "luke@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Luke! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/luke-nadackapadam/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Nick", last_name: "G", email: "nick@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Nick! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/nickhil-vijay-gholkar/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Warren", last_name: "B", email: "warren@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Warren! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/warrenthomasbarnes/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Westin", last_name: "W", email: "westin@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Westin! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/westin-m-walker/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
+  { first_name: "Yassar", last_name: "A", email: "yassar@example.com", phone_number: "123-456-7890", short_bio: "Hi! I am Yassar! I'm enrolled in Actualize Bootcamp", linkedin_url: "https://www.linkedin.com/in/yassar-ahmed/", twitter_handle: "http://twitter.com", personal_website_url: "http://personalblog.com", online_resume_url: "http://resume.com", github_url: "http://github.com", photo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", password: "password", password_confirmation: "password" },
 ])
 
 Education.create!([
-  { start_date: "2022-01-01", end_date: "2022-07-01", degree: "Bachelor of Science", university_name: "University of Washington", details: "Details about school", student_id: 1 },
-  { start_date: "2023-01-01", end_date: "2023-07-01", degree: "Bachelor of Science", university_name: "University of Illinois", details: "Details about school", student_id: 2 },
-  { start_date: "2022-09-01", end_date: "2022-12-31", degree: "Bachelor of Science", university_name: "University of Pennsylvania", details: "Details about school", student_id: 3 },
+  { start_date: "2021-09-01", end_date: "2021-12-31", degree: "Physics", university_name: "Cornell University", details: "Details about school", student_id: 4 },
+  { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Business", university_name: "University of Chicago", details: "Details about school", student_id: 5 },
+  { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Biology", university_name: "Yale University", details: "Details about school", student_id: 6 },
+  { start_date: "2021-09-01", end_date: "2021-12-31", degree: "Nursing", university_name: "University of Michigan", details: "Details about school", student_id: 7 },
+  { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Social Science", university_name: "Stanford University", details: "Details about school", student_id: 8 },
+  { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Business Administration", university_name: "Harvard University", details: "Details about school", student_id: 9 },
+  { start_date: "2021-09-01", end_date: "2021-12-31", degree: "Computer Science", university_name: "Massachusetts Institute of Technology", details: "Details about school", student_id: 10 },
+  { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Psychology", university_name: "Princeton University", details: "Details about school", student_id: 11 },
+  { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Computer Engineering", university_name: "Columbia University", details: "Details about school", student_id: 12 },
+  { start_date: "2021-09-01", end_date: "2021-12-31", degree: "Physics", university_name: "Cornell University", details: "Details about school", student_id: 13 },
+  { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Bacheolor of Arts", university_name: "University California", details: "Details about school", student_id: 14 },
+  { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Computer Science", university_name: "Georgia Institute of Technology", details: "Details about school", student_id: 15 },
 ])
-
 Experience.create!([
-  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Google", details: "Details about school", student_id: 1 },
-  { start_date: "2023-01-01", end_date: "2023-07-01", job_title: "Software Engineer", company_name: "Microsoft", details: "Details about school", student_id: 2 },
-  { start_date: "2022-09-01", end_date: "2022-12-31", job_title: "Software Engineer", company_name: "Apple", details: "Details about school", student_id: 3 },
-  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Amazon", details: "Details about school", student_id: 1 },
-  { start_date: "2023-01-01", end_date: "2023-07-01", job_title: "Software Engineer", company_name: "Facebook", details: "Details about school", student_id: 2 },
-  { start_date: "2022-09-01", end_date: "2022-12-31", job_title: "Software Engineer", company_name: "Netflix", details: "Details about school", student_id: 3 },
-  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Uber", details: "Details about school", student_id: 1 },
-  { start_date: "2023-01-01", end_date: "2023-07-01", job_title: "Software Engineer", company_name: "Airbnb", details: "Details about school", student_id: 2 },
-  { start_date: "2022-09-01", end_date: "2022-12-31", job_title: "Software Engineer", company_name: "Tesla", details: "Details about school", student_id: 3 },
+  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Nvidia", details: "Senior Software Engineer", student_id: 4 },
+  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Cisco", details: "Senior Software Engineer", student_id: 5 },
+  { start_date: "2023-01-01", end_date: "2023-07-01", job_title: "Software Engineer", company_name: "Wells Fargo", details: "Backend Developer", student_id: 6 },
+  { start_date: "2022-09-01", end_date: "2022-12-31", job_title: "Software Engineer", company_name: "Walmart", details: "Assistant Software Engineer", student_id: 7 },
+  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Berkshire Hathaway", details: "Frontend Developer", student_id: 8 },
+  { start_date: "2023-01-01", end_date: "2023-07-01", job_title: "Software Engineer", company_name: "Hilton", details: "Frontend Developer", student_id: 9 },
+  { start_date: "2022-09-01", end_date: "2022-12-31", job_title: "Software Engineer", company_name: "JPMorgan", details: "Intern", student_id: 10 },
+  { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Bank of America", details: "Testing Engineer", student_id: 11 },
+  { start_date: "2023-01-01", end_date: "2023-07-01", job_title: "Software Engineer", company_name: "Lockheed Martin", details: "Pentester", student_id: 12 },
+  { start_date: "2022-09-01", end_date: "2022-12-31", job_title: "Software Engineer", company_name: "Boeing", details: "Senior Software Engineer", student_id: 13 },
 ])
-
 Skill.create!([
-  { skill_name: "Ruby", student_id: 1 },
-  { skill_name: "Python", student_id: 2 },
-  { skill_name: "Java", student_id: 3 },
-  { skill_name: "JavaScript", student_id: 1 },
-  { skill_name: "HTML", student_id: 2 },
-  { skill_name: "CSS", student_id: 3 },
-  { skill_name: "C++", student_id: 1 },
-  { skill_name: "C#", student_id: 2 },
-  { skill_name: "PHP", student_id: 3 },
-  { skill_name: "SQL", student_id: 1 },
-
+  { skill_name: "Ruby", student_id: 4 },
+  { skill_name: "Python", student_id: 5 },
+  { skill_name: "Java", student_id: 6 },
+  { skill_name: "JavaScript", student_id: 7 },
+  { skill_name: "HTML", student_id: 8 },
+  { skill_name: "CSS", student_id: 9 },
+  { skill_name: "C++", student_id: 10 },
+  { skill_name: "C#", student_id: 11 },
+  { skill_name: "PHP", student_id: 12 },
+  { skill_name: "SQL", student_id: 13 },
+  { skill_name: "Python", student_id: 1 },
+  { skill_name: "Java", student_id: 2 },
+  { skill_name: "JavaScript", student_id: 3 },
+  { skill_name: "HTML", student_id: 4 },
+  { skill_name: "CSS", student_id: 5 },
+  { skill_name: "C++", student_id: 6 },
+  { skill_name: "C#", student_id: 7 },
+  { skill_name: "PHP", student_id: 8 },
+  { skill_name: "SQL", student_id: 9 },
+  { skill_name: "TypeScript", student_id: 10 },
+  { skill_name: "Swift", student_id: 11 },
+  { skill_name: "Ruby", student_id: 12 },
+  { skill_name: "Python", student_id: 13 },
+])
+Capstone.create!([
+  { name: "Capstone 7", description: "Development of electric hybrid motorcycle.", url: "http://capstone1.com", screenshot: "https://upload.wikimedia.org/wikipedia/commons/2/27/QEMU_6.2_screenshot_%28cropped%29.png", student_id: 4 },
+  { name: "Capstone 8", description: "Solar panels and their directional control", url: "http://capstone2.com", screenshot: "https://kinsta.com/wp-content/uploads/2021/04/cleanshot-obfuscate-tool.png", student_id: 5 },
+  { name: "Capstone 9", description: "Red traffic light detector system.", url: "http://capstone3.com", screenshot: "https://kinsta.com/wp-content/uploads/2021/04/notes-image.png", student_id: 6 },
+  { name: "Capstone 10", description: "Motorized chain mechanism", url: "http://capstone4.com", screenshot: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Slax.png", student_id: 7 },
+  { name: "Capstone 11", description: "System of voice recognition", url: "http://capstone5.com", screenshot: "https://blog.desdelinux.net/wp-content/uploads/2012/11/slax.jpg", student_id: 8 },
+  { name: "Capstone 12", description: "Systems of object recognition", url: "http://capstone6.com", screenshot: "https://www.flupe.com/code/code-screenshot.png", student_id: 9 },
+  { name: "Capstone 13", description: "Image processing", url: "http://capstone7.com", screenshot: "https://www.flupe.com/code/code-screenshot.png", student_id: 10 },
+  { name: "Capstone 14", description: "Develop a marketing strategy and execution plan", url: "http://capstone8.com", screenshot: "https://www.flupe.com/code/code-screenshot.png", student_id: 11 },
+  { name: "Capstone 15", description: "Design a mobile application", url: "http://capstone9.com", screenshot: "https://www.flupe.com/code/code-screenshot.png", student_id: 12 },
+  { name: "Capstone 16", description: "Design a website", url: "http://capstone10.com", screenshot: "https://www.flupe.com/code/code-screenshot.png", student_id: 13 },
 ])
