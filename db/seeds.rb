@@ -12,6 +12,8 @@ Student.create!([
 ])
 
 Education.create!([
+  { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Bacheolor of Arts", university_name: "University California", details: "Details about school", student_id: 2 },
+  { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Computer Science", university_name: "Georgia Institute of Technology", details: "Details about school", student_id: 3 },
   { start_date: "2021-09-01", end_date: "2021-12-31", degree: "Physics", university_name: "Cornell University", details: "Details about school", student_id: 4 },
   { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Business", university_name: "University of Chicago", details: "Details about school", student_id: 5 },
   { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Biology", university_name: "Yale University", details: "Details about school", student_id: 6 },
@@ -22,8 +24,6 @@ Education.create!([
   { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Psychology", university_name: "Princeton University", details: "Details about school", student_id: 11 },
   { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Computer Engineering", university_name: "Columbia University", details: "Details about school", student_id: 12 },
   { start_date: "2021-09-01", end_date: "2021-12-31", degree: "Physics", university_name: "Cornell University", details: "Details about school", student_id: 13 },
-  { start_date: "2022-07-01", end_date: "2022-08-31", degree: "Bacheolor of Arts", university_name: "University California", details: "Details about school", student_id: 14 },
-  { start_date: "2023-07-01", end_date: "2023-008-31", degree: "Computer Science", university_name: "Georgia Institute of Technology", details: "Details about school", student_id: 15 },
 ])
 Experience.create!([
   { start_date: "2022-01-01", end_date: "2022-07-01", job_title: "Software Engineer", company_name: "Nvidia", details: "Senior Software Engineer", student_id: 4 },
